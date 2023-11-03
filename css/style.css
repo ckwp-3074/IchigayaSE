@@ -21,39 +21,6 @@ h1 {
 }
 
 .play {
-    width: calc(50% - 10px);
-    background-color: #fff;
-    margin: 5px;
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    text-align: center;
+	width: 100px;
 }
 
-.play-inner {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-p {
-    margin: 10px 0;
-}
-
-.play-button {
-    background-color: #007bff;
-    color: #fff;
-    padding: 5px 10px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 14px;
-}
-
-.play-button:hover {
-    background-color: #0056b3;
-}
-
-.audio-player {
-    display: none;
-}
