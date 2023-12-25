@@ -192,6 +192,104 @@
             </div>
         </div>
 
+        <div class="play">
+            <div class="play-inner">
+                <p>俺こんなテンション高かったけな今まで</p>
+                <button class="play-button">再生</button>
+                <audio class="audio-player">
+                    <source src="src/orekonnnatensyonn.mp3" type="audio/mpeg">
+                </audio>
+            </div>
+        </div>
+
+        <div class="play">
+            <div class="play-inner">
+                <p>あの初期微動がこr</p>
+                <button class="play-button">再生</button>
+                <audio class="audio-player">
+                    <source src="src/anosyokibidou.mp3" type="audio/mpeg">
+                </audio>
+            </div>
+        </div>
+
+        <div class="play">
+            <div class="play-inner">
+                <p>ゴ◯ブリみたiｗ</p>
+                <button class="play-button">再生</button>
+                <audio class="audio-player">
+                    <source src="src/goki.mp3" type="audio/mpeg">
+                </audio>
+            </div>
+        </div>
+
+        <div class="play">
+            <div class="play-inner">
+                <p>これ行けるんじゃないですk(察し)</p>
+                <button class="play-button">再生</button>
+                <audio class="audio-player">
+                    <source src="src/koreikeru.mp3" type="audio/mpeg">
+                </audio>
+            </div>
+        </div>
+
+        <div class="play">
+            <div class="play-inner">
+                <p>これ難易度たかいっすね</p>
+                <button class="play-button">再生</button>
+                <audio class="audio-player">
+                    <source src="src/thisisdiff.mp3" type="audio/mpeg">
+                </audio>
+            </div>
+        </div>
+
+        <div class="play">
+            <div class="play-inner">
+                <p>これなんすかこれなんk</p>
+                <button class="play-button">再生</button>
+                <audio class="audio-player">
+                    <source src="src/korenansuka.mp3" type="audio/mpeg">
+                </audio>
+            </div>
+        </div>
+        <div class="play">
+            <div class="play-inner">
+                <p>(ひたすら)泣く</p>
+                <button class="play-button">再生</button>
+                <audio class="audio-player">
+                    <source src="src/naku.mp3" type="audio/mpeg">
+                </audio>
+            </div>
+        </div>
+
+        <div class="play">
+            <div class="play-inner">
+                <p>まあまあまあ、これ大事っすよやっぱり</p>
+                <button class="play-button">再生</button>
+                <audio class="audio-player">
+                    <source src="src/daiji.mp3" type="audio/mpeg">
+                </audio>
+            </div>
+        </div>
+
+        <div class="play">
+            <div class="play-inner">
+                <p>(ひたすら)泣く</p>
+                <button class="play-button">再生</button>
+                <audio class="audio-player">
+                    <source src="src/naku.mp3" type="audio/mpeg">
+                </audio>
+            </div>
+        </div>
+
+        <div class="play">
+            <div class="play-inner">
+                <p>レッツゴートゥーヘブンインザモーニングギャラクシー</p>
+                <button class="play-button">再生</button>
+                <audio class="audio-player">
+                    <source src="src/gotohebun.mp3" type="audio/mpeg">
+                </audio>
+            </div>
+        </div>
 
         <div class="play">
             <div class="play-inner">
@@ -225,6 +323,8 @@
         </div>
     </div>
         
+    <p id="result" style="text-align: center;"></p>
+
     <footer style="text-align: center;">
         <p>&copy; 2023 ワープロ部の一部の界隈. すべての権利は保護されています。</p>
         <a href="datail.html">利用規約</a>
@@ -253,4 +353,16 @@
     // Initialize Firebase
     const app = initializeApp(firebaseConfig);
   </script>
+
+<script>
+    // クラス名が "play" の要素を取得
+    var playElements = document.getElementsByClassName('play');
+  
+    // 要素の数を取得
+    var playCount = playElements.length;
+  
+    // 結果をHTMLに表示
+    document.getElementById('result').innerText = '合計SE数: ' + playCount;
+  </script>
+
 </html>
