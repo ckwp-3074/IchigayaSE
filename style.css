@@ -68,3 +68,14 @@ p {
 .audio-player {
     display: none; /* Hide audio player by default */
 }
+
+/* Change Lang Button*/
+
+.changelangbtn{
+    text-align: right;
+
+}
+
+.changelangbtn:link :visited :hover :active{
+    color: black;
+}
