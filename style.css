@@ -44,7 +44,7 @@ h1 {
 }
 
 /* Paragraph styles */
-p {
+p,div {
     margin-bottom: 10px;
     color: #555;
 }
