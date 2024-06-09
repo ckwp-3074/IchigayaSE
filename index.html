@@ -19,7 +19,7 @@
 </script>
 <body>
     <h1>市ヶ谷ルークSE</h1>
-    <div style="text-align: center;">
+    <div style="text-align: center;" class="openpwa">
         <a href="./install/index.html">このサイトをスマホにインストールする方法</a>
     </div>
 
@@ -548,7 +548,14 @@
     }
   </script>
 
-  <script>
-    
-  </script>
-</html>
+<script>
+    window.addEventListener('load', function() {
+        if (window.matchMedia('(display-mode: standalone)').matches || window.navigator.standalone === true) {
+            // PWAとして開かれている場合
+            var openPwaElements = document.getElementsByClassName('openpwa');
+            for (var i = 0; i < openPwaElements.length; i++) {
+                openPwaElements[i].style.display = 'none';
+            }
+        }
+    });
+</script></html>
