@@ -19,6 +19,8 @@
 </script>
 <body>
     <h1>市ヶ谷ルークSE</h1>
+    <div id="last-commit" style="text-align: right;">最終コミット日時を読み込んでいます...</div>
+
     <div style="text-align: center;" class="openpwa">
         <a href="./install/index.html">このサイトをスマホにインストールする方法</a>
     </div>
@@ -649,4 +651,36 @@
             }
         }
     });
-</script></html>
+</script>
+
+<script>
+//最終更新日を取得するスクリプト
+async function fetchLastCommitDate() {
+      const username = 'ckwp-3074'; // あなたのGitHubユーザー名
+      const repo = 'IchigayaSE'; // あなたのリポジトリ名
+      const url = `https://api.github.com/repos/${username}/${repo}/commits?per_page=1`;
+
+      try {
+        const response = await fetch(url);
+        const data = await response.json();
+        const lastCommitDate = new Date(data[0].commit.author.date);
+        
+        // 日本語表記にフォーマット
+        const options = { year: 'numeric', month: 'numeric', day: 'numeric', weekday: 'short' };
+        const formattedDate = lastCommitDate.toLocaleDateString('ja-JP', options);
+
+        // 曜日の括弧を追加
+        const [datePart, weekday] = formattedDate.split('(');
+        const formattedDateWithBrackets = `${datePart}(${weekday}`;
+
+        document.getElementById('last-commit').textContent = `最終更新日: ${formattedDate}`;
+      } catch (error) {
+        document.getElementById('last-commit').textContent = '最終コミット日時の読み込みに失敗しました';
+        console.error('Error fetching last commit date:', error);
+      }
+    }
+
+    fetchLastCommitDate();
+  </script>
+
+</html>
