@@ -30,3 +30,8 @@ self.addEventListener('fetch', function(event) {
 			})
 	);
 });
+
+//Androidで通知する
+self.addEventListener('fetch', function(e) {
+	//空でOK
+  })
