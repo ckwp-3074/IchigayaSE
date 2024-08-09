@@ -2,7 +2,7 @@
 	"short_name": "市ヶ谷ルークSE",
 	"name": "市ヶ谷SE",
 	"display": "standalone",
-	"start_url": "https://irse.iixd.jp/index.html",
+	"start_url": "https://irse.plok.jp/index.html",
 	"icons": [
 		{
 			"src": "images/app-icon-192.png",
